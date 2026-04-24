@@ -6,9 +6,9 @@ function LangItem(strCode, strName) {
 }
 function SetLang() {
    var i = 0;
-   // gLng[i++] = LangItem('de', 'German');
    gLng[i++] = LangItem('en', 'English');
-   // gLng[i++] = LangItem('es', 'Spanish');
-   // gLng[i++] = LangItem('it', 'Italian');
-   // gLng[i++] = LangItem('pt', 'Portuguese');
+   gLng[i++] = LangItem('de', 'German');
+   gLng[i++] = LangItem('es', 'Spanish');
+   gLng[i++] = LangItem('it', 'Italian');
+   gLng[i++] = LangItem('pt', 'Portuguese');
 }

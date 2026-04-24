@@ -320,9 +320,9 @@
 
 
     function OnUnload() {
-      F10.src = "./_COM/ESMTITLE.HTML";
-      F11.src = "./_COM/ESMSELCT.HTML";
-      F12.src = "./_COM/ESMBLANK.HTML";
+      document.getElementById('F10').src = "./_COM/ESMTITLE.HTML";
+      document.getElementById('F11').src = "./_COM/ESMSELCT.HTML";
+      document.getElementById('F12').src = "./_COM/ESMBLANK.HTML";
     }
 
 
@@ -340,10 +340,10 @@
   </noscript>
 </head>
 <frameset id="F01" rows="71,*" frameborder="0" framespacing="0">
-  <frame id="F10" src="./en/html/ESMTITLE.HTML" noresize scrolling="no" />
+  <frame id="F10" src="./_COM/ESMTITLE.HTML" noresize scrolling="no" />
   <frameset id="F02" cols="370,*">
-    <frame id="F11" src="./en/html/ESMSELCT.HTML" />
-    <frame id="F12" src="./en/html/ESMBLANK.HTML" onResize="OnResizeProc();" />
+    <frame id="F11" src="./_COM/ESMSELCT.HTML" />
+    <frame id="F12" src="./_COM/ESMBLANK.HTML" onResize="OnResizeProc();" />
   </frameset>
 </frameset>
 

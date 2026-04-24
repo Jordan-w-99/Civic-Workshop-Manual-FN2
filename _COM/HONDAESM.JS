@@ -97,9 +97,9 @@ function ChangeLang(fSub) {
     wnd.location.reload();
   }
   else {
-    wnd.F10.location = strPath + strLang + "/html/ESMTITLE.HTML";
-    wnd.F11.location = strPath + strLang + "/html/ESMSELCT.HTML";
-    wnd.F12.location = strPath + strLang + "/html/ESMBLANK.HTML";
+    wnd.frames["F10"].contentWindow.location = strPath + strLang + "/html/ESMTITLE.HTML";
+    wnd.frames["F11"].contentWindow.location = strPath + strLang + "/html/ESMSELCT.HTML";
+    wnd.frames["F12"].contentWindow.location = strPath + strLang + "/html/ESMBLANK.HTML";
   }
 }
 
