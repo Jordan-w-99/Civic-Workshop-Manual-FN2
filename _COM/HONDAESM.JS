@@ -58,14 +58,14 @@ function GetCookie(strName) {
 }
 function SetCookie(strName, strVal, fTmp) {
   var strBuf;
-  var timLim = new Date;
+  var timLim = new Date();
 
-  timLim.setYear(timLim.getYear() + 10);
+  timLim.setYear(timLim.getUTCFullYear() + 10);
   strBuf = strName + "=" + strVal + ";";
   if ((typeof (fTmp) == "undefined") || !fTmp) {
     strBuf += "Expires=" + timLim.toGMTString() + ";";
   }
-
+  
   document.cookie = strBuf;
 }
 function ChangeLang(fSub) {
@@ -93,7 +93,6 @@ function ChangeLang(fSub) {
 
   wnd.SetCookie("EsmLang", strLang + gESM.mySel);
   if (fSub) {
-
     wnd.location.reload();
   }
   else {

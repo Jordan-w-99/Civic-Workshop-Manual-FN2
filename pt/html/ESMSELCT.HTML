@@ -106,7 +106,9 @@ function Initialize()
 
   gMSG.length = 0;
   sDT = new Array;
-                              
+
+  radSM = document.getElementById("radSM");
+  radBM = document.getElementById("radBM");
 
   for (i=0; i < gModelInfo.length; ++i) {
     elmOpt = document.createElement("option");
@@ -183,12 +185,12 @@ function WordSearch()
     strTree = "BRL_";
   }
   else {
-    document.iframeTree.location = "./ESMBLANK.HTML";
+     document.getElementById('iframeTree').contentWindow.location = "./ESMBLANK.HTML";
     return;
   }
   strTree += gModelInfo[gESM.mySel].CodeList[gESM.mcSel].Code + "_";
   strTree += gModelInfo[gESM.mySel].Year + ".html";
-  parent.F12.location = strTree;
+  parent.F12.contentWindow.location = strTree;
 }
 function ClearSearch()
 {
@@ -203,7 +205,7 @@ function ClearSearch()
   gESM.Keyword = "";     
   document.all("txtWord").value = "";
 
-  parent.F12.location="./ESMBLANK.HTML";
+  parent.F12.contentWindow.location="./ESMBLANK.HTML";
   if(radSM.checked == true) {
     strTree = "SMT_";
   }
@@ -211,12 +213,12 @@ function ClearSearch()
     strTree = "BRT_";
   }
   else {
-    document.iframeTree.location = "./ESMBLANK.HTML";
+     document.getElementById('iframeTree').contentWindow.location = "./ESMBLANK.HTML";
     return;
   }
   strTree += gModelInfo[gESM.mySel].CodeList[gESM.mcSel].Code + "_";
   strTree += gModelInfo[gESM.mySel].Year + ".html";
-  document.iframeTree.location = strTree;
+   document.getElementById('iframeTree').contentWindow.location = strTree;
 
 }
 function SortComp(p1, p2)
@@ -238,7 +240,7 @@ function OnChangeLang()
 }
 function OnChangeText()
 {
-  parent.F12.location="./ESMBLANK.HTML";
+  parent.F12.contentWindow.location="./ESMBLANK.HTML";
 }
 function OnChangeModelYear()
 {
@@ -263,7 +265,7 @@ function OnChangeModelCode()
 
   gESM.mcSel = cmbMC.selectedIndex;
   parent.ChangeModelCode(true);
-  parent.F12.location="./ESMBLANK.HTML";
+  parent.F12.contentWindow.location="./ESMBLANK.HTML";
   if(radSM.checked == true) {
     strTree = "SMT_";
   }
@@ -271,12 +273,12 @@ function OnChangeModelCode()
     strTree = "BRT_";
   }
   else {
-    document.iframeTree.location = "./ESMBLANK.HTML";
+     document.getElementById('iframeTree').contentWindow.location = "./ESMBLANK.HTML";
     return;
   }
   strTree += gModelInfo[gESM.mySel].CodeList[gESM.mcSel].Code + "_";
   strTree += gModelInfo[gESM.mySel].Year + ".html";
-  document.iframeTree.location = strTree;
+   document.getElementById('iframeTree').contentWindow.location = strTree;
 }
 function OnChangeModel()
 {
@@ -302,7 +304,7 @@ function OnChangeIndv(fReload, nIndex)
     radBM.checked=true;
     gESM.manTyp = "BM";
   }
-  parent.F12.location="./ESMBLANK.HTML";
+  parent.F12.contentWindow.location="./ESMBLANK.HTML";
 
   var  strTree;
 
@@ -313,12 +315,12 @@ function OnChangeIndv(fReload, nIndex)
     strTree = "BRT_";
   }
   else {
-    document.iframeTree.location = "./ESMBLANK.HTML";
+     document.getElementById('iframeTree').contentWindow.location = "./ESMBLANK.HTML";
     return;
   }
   strTree += gModelInfo[gESM.mySel].CodeList[gESM.mcSel].Code + "_";
   strTree += gModelInfo[gESM.mySel].Year + ".html";
-  document.iframeTree.location = strTree;
+   document.getElementById('iframeTree').contentWindow.location = strTree;
   parent.ChangeModelType(true);
 
 }
@@ -351,7 +353,7 @@ function Tsl(key,sct,sc,sys,comp,sitq){
   gESM.Comp = comp;        
   gESM.Sitq = sitq;        
   document.ESM = gESM;
-  parent.F12.location="./ESMBLANK.HTML";
+  parent.F12.contentWindow.location="./ESMBLANK.HTML";
 
 }
 
