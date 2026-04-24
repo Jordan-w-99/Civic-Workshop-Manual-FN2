@@ -229,7 +229,7 @@
 
       var t = (screen.availHeight - h) / 2;
       var l = (screen.availWidth - w) / 2;
-      var newUrl = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/" + gESM.Lng[gESM.lngSel].Code + "/html/" + "ESMManualMain.html?url=" + escape(url) + "&key=" + key + "&anc=" + anc;
+      var newUrl = window.location.href.substring(0, window.location.href.lastIndexOf("/")) + "/" + gESM.Lng[gESM.lngSel].Code + "/html/" + "ESMManualMain?url=" + escape(url) + "&key=" + key + "&anc=" + anc;
       if (win == null || win.closed) {
 
         win = jsDispPopup(w, h, "toolbar=yes,menubar=yes,status=yes,scrollbars=no,resizable=yes,top=" + t + ",left=" + l, newUrl, true);
@@ -340,11 +340,11 @@
   </noscript>
 </head>
 <frameset id="F01" rows="71,*" frameborder="0" framespacing="0">
-  <frame id="F10" src="./_COM/ESMTITLE.HTML" noresize scrolling="no">
-    <frameset id="F02" cols="370,*">
-      <frame id="F11" src="./_COM/ESMSELCT.HTML">
-        <frame id="F12" src="./_COM/ESMBLANK.HTML" onResize="OnResizeProc();">
-    </frameset>
+  <frame id="F10" src="./en/html/ESMTITLE.HTML" noresize scrolling="no" />
+  <frameset id="F02" cols="370,*">
+    <frame id="F11" src="./en/html/ESMSELCT.HTML" />
+    <frame id="F12" src="./en/html/ESMBLANK.HTML" onResize="OnResizeProc();" />
+  </frameset>
 </frameset>
 
 </html>
